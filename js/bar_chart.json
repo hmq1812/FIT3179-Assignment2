@@ -6,7 +6,7 @@
     "data": {
         "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population-and-demography.csv"
       },
-    "transform": [{"filter": {"field": "Country", "oneOf": ["India", "China"]}}],
+    "transform": [{"filter": {"field": "Country", "oneOf": ["India", "China", "United States of America"]}}],
     "mark": "bar",
     "encoding": {
       "x": {"field": "Year"},

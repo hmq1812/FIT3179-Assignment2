@@ -19,7 +19,7 @@
         "fields": ["Population"]
       }
     },
-    {"calculate": "datum.Population", "as": "Population"}
+    {"calculate": "datum.Population + 0.1", "as": "Population"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
@@ -34,3 +34,4 @@
     ]
   }
 }
+

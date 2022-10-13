@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "World population 2021",
     "data": {
-        "url": "data/population_pie.csv"
+        "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population_pie.csv"
       },
     "transform": [
         {"filter": {
