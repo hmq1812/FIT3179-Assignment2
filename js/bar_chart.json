@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Population of India and China from 1950 to 2021",
+    "width": 800,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population-and-demography.csv"
+      },
+    "transform": [{"filter": {"field": "Country", "oneOf": ["India", "China"]}}],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "Year"},
+      "y": {"field": "Population", "type": "quantitative"},
+      "xOffset": {"field": "Country"},
+      "color": {"field": "Country"},
+     "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Year", "type": "nominal"},
+        {"field": "Population", "type": "quantitative"}
+      ]
+    }
+  }
+  

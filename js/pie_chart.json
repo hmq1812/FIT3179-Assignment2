@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "World population 2021",
+    "data": {
+        "url": "data/population_pie.csv"
+      },
+    "transform": [
+        {"filter": {
+            "field": "Year", "oneOf": ["2021"]}}
+    ],
+    
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Population", "type": "quantitative"},
+      "color": {"field": "Country", "type": "nominal"},
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Population", "type": "quantitative"}
+      ]
+    }
+}
+
+  
