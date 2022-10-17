@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Population of India, China, USA, Indonesia and Pakistan from 1950 to 2021",
+    "data": {
+        "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population_changes.csv"
+      },
+    "params": [
+      {
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
+      },
+      {"name": "select", "select": "point"}
+    ],
+
+    "transform": [{
+          "filter": "datum.Grow >= 10"
+        }
+      ],
+
+    "mark": {
+      "type": "bar",
+      "fill": "#4C78A8",
+      "stroke": "black",
+      "cursor": "pointer"
+    },
+    "encoding": {
+      "x": {"field": "Country", "type": "ordinal", "sort": "-y"},
+      "y": {"field": "Grow", "type": "quantitative"},
+      "fillOpacity": {
+        "condition": {"param": "select", "value": 1},
+        "value": 0.3
+      },
+      "strokeWidth": {
+        "condition": [
+          {
+            "param": "select",
+            "empty": false,
+            "value": 2
+          },
+          {
+            "param": "highlight",
+            "empty": false,
+            "value": 1
+          }
+        ],
+        "value": 0
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Population_1950", "type": "quantitative", "title": "Population in 1950", "format": ","},
+        {"field": "Population_2021", "type": "quantitative", "title": "Population in 2021", "format": ","},
+        {"field": "Grow", "type": "quantitative", "title": "Relative grow"}
+      ]
+    },
+    "config": {
+      "scale": {
+        "bandPaddingInner": 0.2
+      }
+    }
+  }
+  
