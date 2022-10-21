@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>World population visualization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+		<!-- CSS file -->
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<div>
+			<!-- Main -->
+				<section id="main" class="container">
+					<header>
+						<h2>World population</h2>
+						<p>The world population increased from 2.5 billion in 1950 to nearly 8 billion today, and that number are expected to raise to 9.8 billion in 2050. There is country that has less than 1000 people, however, there are countries that have more than 1/8 population of the world. The following visualization presents data from United Nation's website, detailing in population of countries around the world, population growth from 1950 to 2021 and age group of some countries.
+						</p>
+
+					</header>
+					<div class="box">
+						<h3>Population distribution accross the world</h3>
+
+						<div id="map">
+
+						<script type="text/javascript">
+
+						var spec2 = "js/map.vg.json";
+						vegaEmbed('#map', spec2).then(function(result) {
+							// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+						}).catch(console.error);
+						</script>
+						</div>
+
+						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+					</div>
+
+					<div class="box">
+						<h3>Population distribution accross the world</h3>
+
+						<div id="pie_chart"></div>
+
+						<script type="text/javascript">
+						var spec4 = "js/pie_chart.vg.json";
+						vegaEmbed('#pie_chart', spec4).then(function(result) {
+							// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+						}).catch(console.error);
+						</script>
+
+						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+					</div>
+
+					<div class="box">
+						<h3>Population distribution accross the world</h3>
+
+						<div id="line_chart"></div>
+
+						<script type="text/javascript">
+
+						var spec3 = "js/line_chart.vg.json";
+						vegaEmbed('#line_chart', spec3).then(function(result) {
+							// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+						}).catch(console.error);
+						</script>
+
+						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+					</div>
+
+					<div class="box">
+						<h3>Population distribution accross the world</h3>
+
+						<div id="bar_chart"></div>
+
+						<script type="text/javascript">
+
+						var spec5 = "js/bar_chart.vg.json";
+						vegaEmbed('#bar_chart', spec5).then(function(result) {
+							// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+						}).catch(console.error);
+						</script>
+
+						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<p>&copy; Minh Quan Huynh @ FIT3179 Assignment 2 2022.</p>
+				</footer>
+		</div>
+	</body>
+</html>
