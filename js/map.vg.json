@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "World population 2021",
+  "title": "World population by year",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -80,7 +80,7 @@
               "color": {
                 "field": "Population",
                 "type": "quantitative",
-                "scale": {"type": "log"},
+                "scale": {"type": "log", "scheme": "teals"},
                 "legend": { "format": ".2s" }
               },
               "tooltip": [

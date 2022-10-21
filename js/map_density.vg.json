@@ -74,14 +74,15 @@
                 },
                 { "filter": "datum.Year == Year_selection" }
             ],
-            "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
+            "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
             "encoding": {
                 "shape": { "field": "geo", "type": "geojson" },
                 "color": {
                   "field": "Population_density",
                   "type": "quantitative",
-                  "scale": {"type": "log"},
-                  "legend": { "format": ".2s" }
+                  "scale": {"type": "log", "scheme": "orangered"},
+                  "legend": { "format": ".2s" },
+                  "title": "People/km2"
                 },
                 "tooltip": [
                   {"field": "Country", "type": "nominal", "title": "Country"},

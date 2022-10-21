@@ -1,0 +1,11 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Google's stock price over time.",
+    "data": {"url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/world-total_population.csv"},
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": " Annual Growth Rate", "type": "quantitative"}
+    }
+  }
+  
