@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "World population by region",
+    "width": "container",
+    "height": 400,
+    "data": {"url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population-and-demography.csv"},
+    "transform": [
+      {"filter": {
+          "field": "Country", "oneOf": ["Africa", "Northern America", "Latin America and the Caribbean", "Asia", "Europe", "Oceania"]}}],
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "timeUnit": "year", "field": "Year"
+      },
+      "y": {
+        "aggregate": "sum","field": "Population"
+      },
+      "color": {
+        "field": "Country"
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Region"},
+        {"field": "Year", "type": "temporal", "format": "%Y"},
+        {"field": "Population", "type": "quantitative", "format": ","}
+      ]
+    }
+  }

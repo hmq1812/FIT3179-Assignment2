@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Population of India, China, USA, Indonesia and Pakistan from 1950 to 2021",
-    "width": 800,
-    "height": 400,
+    "width":"container",
+    "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population-and-demography.csv"
       },
@@ -19,7 +19,10 @@
       "scale": {
         "domain": ["China", "India", "United States of America", "Indonesia", "Pakistan"],
         "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(189, 189, 189)", "rgb(189, 189, 189)", "rgb(189, 189, 189)"]
-      }},
+      },
+    "legend":{
+      "orient": "bottom"
+    }},
       
      "tooltip": [
         {"field": "Country", "type": "nominal"},

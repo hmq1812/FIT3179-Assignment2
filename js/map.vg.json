@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "World population by year",
-  "width": 800,
+  "width": "container",
   "height": 400,
   "projection": {"type": "equalEarth"},
   "params": [{
@@ -81,7 +81,7 @@
                 "field": "Population",
                 "type": "quantitative",
                 "scale": {"type": "log", "scheme": "teals"},
-                "legend": { "format": ".2s" }
+                "legend": { "format": ".2s"}
               },
               "tooltip": [
                 {"field": "Country", "type": "nominal", "title": "Country"},

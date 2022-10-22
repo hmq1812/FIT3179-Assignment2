@@ -1,11 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Google's stock price over time.",
+    "title": "World's annual growth rate in percentage",
+    "width": "container",
+    "height": 300,
     "data": {"url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/world-total_population.csv"},
     "mark": "line",
     "encoding": {
       "x": {"field": "Year", "type": "temporal"},
-      "y": {"field": " Annual Growth Rate", "type": "quantitative"}
+      "y": {"field": "Annual_growth_rate", "type": "quantitative", "title": "Annual grow rate in %"},
+      "tooltip": [
+        {"field": "Year", "type": "temporal", "format": "%Y"},
+        {"field": "Annual_growth_rate", "type": "quantitative", "title": "Annual grow rate in %"}
+      ]
     }
   }
   

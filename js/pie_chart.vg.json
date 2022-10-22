@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Proportion of China, India and USA population in 2021",
+    "width": "container",
+    "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population_pie.csv"
       },
@@ -18,6 +20,9 @@
         "scale": {
           "domain": ["China", "India", "United States of America", "The rest of the world"],
           "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(43, 135, 31)", "rgb(189, 189, 189)"]
+        },
+        "legend": {
+          "orient": "bottom"
         }
       },
       "tooltip": [

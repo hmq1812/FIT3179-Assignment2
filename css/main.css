@@ -39,6 +39,12 @@ h6 {
   padding: 3em;
 }
 
+#main > .box h3 {
+  font-size: 25pt;
+  color: #1f4d9c;
+  padding-bottom: 20px;
+}
+
 
 #main {
   padding: 4em 0;
@@ -58,11 +64,21 @@ h6 {
 
 #main > header h2 {
   font-size: 40pt;
+  color: #1f4d9c;
 }
 
 #footer {
   text-align: center;
 }
 
+.vis-container {
+  width: 100%;
+}
 
+.description-right {
+  padding-left: 20px;
+}
 
+.description-left {
+  padding-right: 20px;
+}

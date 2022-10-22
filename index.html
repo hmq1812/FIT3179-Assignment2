@@ -1,166 +1,233 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Alpha by HTML5 UP</title>
+		<title>World population visualization</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+		<!-- Import pure.css -->
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+		integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- CSS file -->
+		<link rel="stylesheet" href="/css/main.css" />
 	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">Layouts</a>
-								<ul>
-									<li><a href="generic.html">Generic</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
-
-			<!-- Banner -->
-				<section id="banner">
-					<h2>Alpha</h2>
-					<p>Another fine responsive site template freebie by HTML5 UP.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button primary">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>
-				</section>
-
+	<body>
+		<div>
 			<!-- Main -->
 				<section id="main" class="container">
+					<header>
+						<h2>World population</h2>
+						<p>The world population increased from <b>2.5 billion in 1950</b> to nearly <b>8 billion today</b>, and that number are expected to raise to 9.8 billion in 2050. There is country that has <b>less than 1000 people</b>, however, there are countries that have <b>more than 1/8 population of the world</b>. The following visualization presents data from United Nation's website, detailing in <b>population of countries</b> around the world, <b>population growth from 1950 to 2021</b> and some of the <b>world's most populated countries.</b>
+						</p>
 
-					<section class="box special">
-						<header class="major">
-							<h2>Introducing the ultimate mobile app
-							<br />
-							for doing stuff with your phone</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-						</header>
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-					</section>
+					</header>
+					<div class="box">
+						<h3>Population distribution accross the world</h3>
 
-					<section class="box special features">
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-bolt accent2"></span>
-								<h3>Magna etiam</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-chart-area accent3"></span>
-								<h3>Ipsum dolor</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
+						<!-- <div class="pure-g">
+							<div class="pure-u-2-3">
+							  <div id="vis1" class="vis-container"></div>
+							</div>
+							<div class="pure-u-1-3">
+							  <div class="description description-right">
+							
+								<p>
+								In 2021, China has the world's largest population (1.426 billion), following by but India (1.407 billion). The next five most populous nations – the United States, Indonesia, Pakistan, Nigeria and Brazil – together have fewer people than India or China. </p>
+								</div>
+							</div>
+					  
+						  </div>
+
+						<div class="pure-g">
+							<div class="pure-u-1-3">
+								<div class="description description-left">
+								  <p>
+								  In 2021, China has the world's largest population (1.426 billion), following by but India (1.407 billion). The next five most populous nations – the United States, Indonesia, Pakistan, Nigeria and Brazil – together have fewer people than India or China. </p>
+								  </div>
+							  </div>
+							<div class="pure-u-2-3">
+							  <div id="vis2" class="vis-container"></div>
+							</div>
+							
+					  
+						  </div> -->
+						<div id="vis1" class="vis-container"></div>
+						<div class="pure-g">
+						<div class="pure-u-1-2">
+							<div class="description description-left">
+							  <p>
+								In 2021, China has the world's largest population (1.426 billion), following by but India (1.407 billion). The next five most populous nations – the United States, Indonesia, Pakistan, Nigeria and Brazil – together have fewer people than India or China. </p>
+							</div>
+						  </div>
+						  <div class="pure-u-1-2">
+							<div class="description description-right">
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							</div>
+						  </div>
 						</div>
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-cloud accent4"></span>
-								<h3>Sed feugiat</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-lock accent5"></span>
-								<h3>Enim phasellus</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
+						
+						<div id="vis2" class="vis-container"></div>
+						<div class="pure-g">
+						<div class="pure-u-1-2">
+							<div class="description description-left">
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							</div>
+						  </div>
+						  <div class="pure-u-1-2">
+							<div class="description description-right">
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							</div>
+						  </div>
 						</div>
-					</section>
-
-					<div class="row">
-						<div class="col-6 col-12-narrower">
-
-							<section class="box special">
-								<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>Sed lorem adipiscing</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-
 						</div>
-						<div class="col-6 col-12-narrower">
 
-							<section class="box special">
-								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-								<h3>Accumsan integer</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
 
+					<div class="box">
+						<h3>World's most populated countries</h3>
+
+						<div class="pure-g">
+							<div class="pure-u-1-2">
+							  <div class="description description-left">
+								<p>China and India both contributed around 17.5% of the world's population. The third most populated country - The United States of America only contributed to approximately 4% of the world population, following by . China has been the world's most populous nation for many centuries.</p>
+							  </div>
+							</div>
+							<div class="pure-u-1-2">
+							  <div id="vis3" class="vis-container"></div>
+							</div>
+						</div>
+
+
+						<div class="pure-g">
+							<div class="pure-u-1-2">
+							  <div id="vis4" class="vis-container"></div>
+							</div>
+							<div class="pure-u-1-2">
+							  <div class="description description-right">
+								<p>In 1950, the population of United States of America was around 150 million, while China populated around 543 million and the population of India was approximately 357 million people. Over the 70 years period, population of China and India have the growth rate significantly greater than others countries in top 5 populated countries in 2021, which are the United States of America, Indonesia and Pakistan. In 2021, China still have more population than India, however, India are expected to become the world most populated country in 2023. </p>
+							  </div>
+							</div>
+					  
+						  </div>
+					</div>
+
+					<div class="box">
+						<h3>World's population by region</h3>
+						<div id="vis5" class="vis-container"></div>
+						<div class="pure-g">
+						<div class="pure-u-1-2">
+							<div class="description description-left">
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							</div>
+						  </div>
+						  <div class="pure-u-1-2">
+							<div class="description description-right">
+							  <p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							</div>
+						  </div>
 						</div>
 					</div>
 
-				</section>
 
-			<!-- CTA -->
-				<section id="cta">
+					<div class="box">
+						<h3>Population growth</h3>
 
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
+						<div class="pure-g">
+							<div class="pure-u-1-2">
+							  <div class="description description-left">
+								<p>The first column contains text and the second column contains a visualisation.
+								  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								  dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								  dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+							  </div>
 							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
+							<div class="pure-u-1-2">
+							  <div id="vis6" class="vis-container"></div>
 							</div>
 						</div>
-					</form>
 
+						<div class="pure-g">
+							<div class="pure-u-1-2">
+							  <div id="vis7" class="vis-container"></div>
+							</div>
+							
+							<div class="pure-u-1-2">
+								<div class="description description-right">
+								  <p>The first column contains text and the second column contains a visualisation.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+									dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
 				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					<p>&copy; Minh Quan Huynh @ FIT3179 Assignment 2 2022.</p>
 				</footer>
-
 		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
+<script type="text/javascript">
+	var specVis1 = "js/map.vg.json";
+	var specVis2 = "js/map_density.vg.json";
+	var specVis3 = "js/pie_chart.vg.json";
+	var specVis4 = "js/line_chart.vg.json";
+	var specVis5 = "js/area_chart.vg.json";
+	var specVis6 = "js/bar_chart.vg.json";
+	var specVis7 = "js/line_chart_world.vg.json";
+
+	vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+
+	vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
+		// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+	}).catch(console.error);
+	</script>
 	</body>
 </html>

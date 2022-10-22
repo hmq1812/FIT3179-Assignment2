@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Population of India, China, USA, Indonesia and Pakistan from 1950 to 2021",
+    "width":"container",
     "data": {
         "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population_changes.csv"
       },
