@@ -16,7 +16,8 @@
         "aggregate": "sum","field": "Population"
       },
       "color": {
-        "field": "Country"
+        "field": "Country",
+        "scale": {"scheme": "accent"}
       },
       "tooltip": [
         {"field": "Country", "type": "nominal", "title": "Region"},

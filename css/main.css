@@ -1,4 +1,3 @@
-
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic);
 
 body {
@@ -24,6 +23,35 @@ h6 {
   line-height: 1em;
   margin: 0 0 0.5em 0;
 }
+
+.description china {
+  color: rgb(66, 72, 245);
+}
+
+.description india {
+  color: rgb(181, 29, 18);
+}
+
+.description usa {
+  color: rgb(43, 135, 31);
+}
+
+.description indo {
+  color: rgb(255,165,0);
+}
+
+.description pakis {
+  color: rgb(0, 189, 189);
+}
+
+.description asia {
+  color: #BEAED4;
+}
+
+.description oceania {
+  color: #F0027F;
+}
+
 
 .container {
   margin: 0 auto;
@@ -60,6 +88,7 @@ h6 {
   font-style: normal;
   margin: 1em 0 0 0;
   padding: 1em 0 1.25em 0;
+  font-size: 20pt;
 }
 
 #main > header h2 {

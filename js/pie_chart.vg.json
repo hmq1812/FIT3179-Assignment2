@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Proportion of China, India and USA population in 2021",
+    "title": "Proportion of China, India and USA, Indonesia and Pakistan population in 2021",
     "width": "container",
     "height": 300,
     "data": {
@@ -19,7 +19,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["China", "India", "United States of America", "Indonesia", "Pakistan", "The rest of the world"],
-          "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(43, 135, 31)", "rgb(255,165,0)", "rgb(189, 189, 189)", "rgb(189, 189, 189)"]
+          "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(43, 135, 31)", "rgb(255,165,0)", "rgb(0, 189, 189)", "rgb(189, 189, 189)"]
         },
         "legend": {
           "orient": "bottom"

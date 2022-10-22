@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Population of India, China, USA, Indonesia and Pakistan from 1950 to 2021",
+    "title": "Top 10 growing countries from 1950 to 2021",
     "width":"container",
     "data": {
         "url": "https://raw.githubusercontent.com/hmq1812/FIT3179-Assignment2/master/data/population_changes.csv"
@@ -26,7 +26,7 @@
     },
     "encoding": {
       "x": {"field": "Country", "type": "ordinal", "sort": "-y"},
-      "y": {"field": "Grow", "type": "quantitative"},
+      "y": {"field": "Grow", "type": "quantitative", "title": "Relative grow (Times)"},
       "fillOpacity": {
         "condition": {"param": "select", "value": 1},
         "value": 0.3
@@ -50,7 +50,7 @@
         {"field": "Country", "type": "nominal"},
         {"field": "Population_1950", "type": "quantitative", "title": "Population in 1950", "format": ","},
         {"field": "Population_2021", "type": "quantitative", "title": "Population in 2021", "format": ","},
-        {"field": "Grow", "type": "quantitative", "title": "Relative grow"}
+        {"field": "Grow", "type": "quantitative"}
       ]
     },
     "config": {
