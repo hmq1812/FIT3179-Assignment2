@@ -18,8 +18,8 @@
         "field": "Country", 
         "type": "nominal",
         "scale": {
-          "domain": ["China", "India", "United States of America", "The rest of the world"],
-          "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(43, 135, 31)", "rgb(189, 189, 189)"]
+          "domain": ["China", "India", "United States of America", "Indonesia", "Pakistan", "The rest of the world"],
+          "range": ["rgb(66, 72, 245)", "rgb(181, 29, 18)", "rgb(43, 135, 31)", "rgb(255,165,0)", "rgb(189, 189, 189)", "rgb(189, 189, 189)"]
         },
         "legend": {
           "orient": "bottom"
